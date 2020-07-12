@@ -1,0 +1,12 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Harry Potter",
+      "categoria": "ficção",
+      "valor": "30,00",
+      "status": 0,
+      "ano": 2000
+    }
+  ]
+}
