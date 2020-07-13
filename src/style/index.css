@@ -8,6 +8,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  background-color: #f5f5f5;
 }
 
 body a {
@@ -33,6 +34,20 @@ input[type="search"]::-webkit-search-decoration {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 8;
+}
+
+img {
+  max-width: 100%;
 }
 
 .item-off {

@@ -93,6 +93,7 @@ const PageLogin = styled.section`
         cursor: pointer;
         color: #fff;
         width: 60%;
+        outline: none;
         font-family: 'Montserrat', sans-serif;
         font-weight: 400;
         margin: 26px auto 0 auto;

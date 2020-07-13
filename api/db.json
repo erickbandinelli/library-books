@@ -8,6 +8,33 @@
       "valor": "30,00",
       "status": 0,
       "ano": 2000
+    },
+    {
+      "id": 2,
+      "img": "https://images-submarino.b2w.io/produtos/imagens/186457/186458_1GG.jpg",
+      "title": "Harry Potter",
+      "categoria": "ficção",
+      "valor": "30,00",
+      "status": 0,
+      "ano": 2000
+    },
+    {
+      "id": 3,
+      "img": "https://images-submarino.b2w.io/produtos/imagens/186457/186458_1GG.jpg",
+      "title": "Harry Potter",
+      "categoria": "ficção",
+      "valor": "30,00",
+      "status": 0,
+      "ano": 2000
+    },
+    {
+      "id": 4,
+      "img": "https://images-submarino.b2w.io/produtos/imagens/186457/186458_1GG.jpg",
+      "title": "Harry Potter",
+      "categoria": "ficção",
+      "valor": "30,00",
+      "status": 0,
+      "ano": 2000
     }
   ]
 }
