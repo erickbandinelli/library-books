@@ -6,18 +6,19 @@ const INITIAL_STATE = {
 
 const reducer = (state = INITIAL_STATE, action) => {
 	switch (action.type) {
-		case 'LOAD_REQUEST_USERS':
+		case 'LOAD_REQUEST_BOOKS':
 			return {
 				...state,
 				loading: true
 			};
-		case 'LOAD_SUCCCES_USERS':
-				localStorage.setItem('jwt', action.payload.access_token);
-				console.log(action.payload.access_token)
-
-				window.location.href = "http://localhost:3000/list-books";
-			break;
-		case 'LOAD_FAILURE_USERS':
+		case 'LOAD_SUCCCES_BOOKS':
+			return {
+				...state,
+				loading: false,
+				error: false,
+				data: action.payload
+			};
+		case 'LOAD_FAILURE_BOOKS':
 			return {
 				...state,
 				loading: false,

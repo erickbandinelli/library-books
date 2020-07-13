@@ -5,7 +5,7 @@ const jsonServer = require('json-server')
 const jwt = require('jsonwebtoken')
 
 const server = jsonServer.create()
-const router = jsonServer.router((path.join(__dirname,'./db.json')))
+const router = jsonServer.router((path.join(__dirname,'/db.json')))
 const userdb = JSON.parse(fs.readFileSync(path.join(__dirname,'/users.json'), 'UTF-8'))
 
 server.use(bodyParser.urlencoded({extended: true}))
@@ -93,30 +93,28 @@ server.post('/auth/login', (req, res) => {
 })
 
 server.use(/^(?!\/auth).*$/,  (req, res, next) => {
-  if (req.headers.authorization === undefined || req.headers.authorization.split(' ')[0] !== 'Bearer') {
+  if (req.headers.authorization === undefined || req.headers.authorization.split(' ')[0] !== `Bearer`) {
     const status = 401
     const message = 'Error in authorization format'
     res.status(status).json({status, message})
     return
-  } else {
-    server.use(router)
-  }
-  // try {
-  //   let verifyTokenResult;
-  //    verifyTokenResult = verifyToken(req.headers.authorization.split(' ')[1]);
+  } 
+  try {
+    let verifyTokenResult;
+     verifyTokenResult = verifyToken(req.headers.authorization.split(' ')[1]);
 
-  //    if (verifyTokenResult instanceof Error) {
-  //      const status = 401
-  //      const message = 'Access token not provided'
-  //      res.status(status).json({status, message})
-  //      return
-  //    }
-  //    next()
-  // } catch (err) {
-  //   const status = 401
-  //   const message = 'Error access_token is revoked'
-  //   res.status(status).json({status, message})
-  // }
+     if (verifyTokenResult instanceof Error) {
+       const status = 401
+       const message = 'Access token not provided'
+       res.status(status).json({status, message})
+       return
+     }
+  } catch (err) {
+    const status = 401
+    const message = 'Error access_token is revoked'
+    res.status(status).json({status, message})
+  }
+  next()
 })
 
 server.use(router)

@@ -2,6 +2,7 @@
   "books": [
     {
       "id": 1,
+      "img": "https://images-submarino.b2w.io/produtos/imagens/186457/186458_1GG.jpg",
       "title": "Harry Potter",
       "categoria": "ficção",
       "valor": "30,00",
