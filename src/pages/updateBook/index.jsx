@@ -37,7 +37,7 @@ const PageListBooks = () => {
                         <p>{item.descricao}</p>
                       </div>
 
-                      <a href={`/view-book/${item.id}`} type="button">Ver mais detalhes</a>
+                      <a href={`/view-books/${item.id}`} type="button">Ver mais detalhes</a>
                     </div>
                   )
                 )

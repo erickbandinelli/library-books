@@ -4,7 +4,15 @@
       "id": 1,
       "name": "softdesign",
       "email": "softdesign@gmail.com",
-      "password": "softdesign"
+      "password": "softdesign",
+      "auth": 1
+    },
+    {
+      "id": 1,
+      "name": "Erick de Oliveira",
+      "email": "erick@gmail.com",
+      "password": "123456",
+      "auth": 2
     }
   ]
 }
